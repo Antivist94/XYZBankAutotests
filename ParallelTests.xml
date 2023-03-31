@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="NewCustomerTest">
+        <classes>
+            <class name="tests.NewCustomerTest">
+                <methods>
+                    <include name="testFieldsForCustomer"/>
+                    <include name="createNewCustomer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OtherTestSuite" parallel="methods">
+        <classes>
+            <class name="tests.NewCustomerTest">
+                <methods>
+                    <include name="checkSortingList"/>
+                    <include name="checkSearchOfCustomer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
